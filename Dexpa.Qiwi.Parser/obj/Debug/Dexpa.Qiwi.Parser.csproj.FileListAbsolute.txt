@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\bin\Debug\Qiwi.Parser.dll
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\bin\Debug\Qiwi.Parser.pdb
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\bin\Debug\HtmlAgilityPack.dll
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\bin\Debug\HtmlAgilityPack.xml
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\obj\Debug\Dexpa.Qiwi.Parser.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\obj\Debug\Qiwi.Parser.dll
+C:\Users\User\Desktop\API\Dexpa.Qiwi.Parser\obj\Debug\Qiwi.Parser.pdb

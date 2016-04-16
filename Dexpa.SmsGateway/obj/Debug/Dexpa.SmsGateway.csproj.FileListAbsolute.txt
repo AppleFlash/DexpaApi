@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\API\Dexpa.SmsGateway\bin\Debug\Dexpa.SmsGateway.dll.config
+C:\Users\User\Desktop\API\Dexpa.SmsGateway\bin\Debug\Dexpa.SmsGateway.dll
+C:\Users\User\Desktop\API\Dexpa.SmsGateway\bin\Debug\Dexpa.SmsGateway.pdb
+C:\Users\User\Desktop\API\Dexpa.SmsGateway\obj\Debug\Dexpa.SmsGateway.dll
+C:\Users\User\Desktop\API\Dexpa.SmsGateway\obj\Debug\Dexpa.SmsGateway.pdb
+C:\Users\User\Desktop\API\Dexpa.SmsGateway\obj\Debug\Dexpa.SmsGateway.csprojResolveAssemblyReference.cache

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Backload</id>
+    <version>1.9.3.1</version>
+    <title>Backload. A professional full featured ASP.NET file upload controller (MVC, Web API, WebForms)</title>
+    <authors>Steffen Habermehl</authors>
+    <owners>Steffen Habermehl</owners>
+    <licenseUrl>https://github.com/blackcity/Backload/License.txt</licenseUrl>
+    <projectUrl>https://github.com/blackcity/Backload</projectUrl>
+    <iconUrl>https://raw.github.com/blackcity/Backload/master/Examples/images/128/backload.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Backload is a professional, full featured server side file upload controller and handler for ASP.NET (MVC, Web API, ASP.NET WebForms). It handles the client side jQuery File Upload Plugin from blueimp, PlUpload from Moxiecode and Fine Uploader from Widen Enterprises out of the box, but it can be easily customized to work with any client side plugin (Example 09 on GitHub). More than 13 examples on GitHub. Cloud upload/manage feature (Release 2.0+). Continually developed and backed by the software industry.
+http://backload.org
+
+Additional NuGet packages: 
+- Productivity package: Backload with JQuery File Upload Plugin from blueimp: PM&gt; Install-Package JQuery_File_Upload_Plugin (http://www.nuget.org/packages/JQuery_File_Upload_Plugin/)
+- Demo package: Backload with the client side JQuery File Upload Plugin from blueimp: PM&gt; Install-Package JQueryFileUpload_Demo_with_Backload (http://www.nuget.org/packages/JQueryFileUpload_Demo_with_Backload/)
+
+Licenses: Standard Edition (free), Additional licenses: http://backload.org.
+Email: backload.mvc [at] gmail [dot] com.</description>
+    <summary>Backload is a professional, full featured server side file upload controller and handler for ASP.NET (MVC, Web API, ASP.NET WebForms).</summary>
+    <releaseNotes>This is the standard version which has no pro-active support (except issues). Also available: Professional version and Enterprise version (includes source code). Contact: backload.mvc [at] gmail [dot] com.
+
+This Release:
+Bug fixes:
+- Issue #28 resolved, where an exception occured in MVC5 RC with an "Attempt to access security transparent method" violation.
+- Issue #30 resolved, where an exception occured with an authenticated user and forms authentication without role provider.
+- Issue with Entity Framwork Migrations resolved which prevented EF Migrations to run properly.
+- Stackoverflow #18976744: System Web Optimization reference set back to 1.0.0 and above which is the default in MVC4.</releaseNotes>
+    <copyright>Steffen Habermehl 2013</copyright>
+    <tags>Fileupload jQuery ASP.NET PlUpload FineUploader MVC WebApi WebForms Controller upload</tags>
+    <dependencies>
+      <dependency id="WebActivatorEx" version="2.0.2" />
+      <dependency id="WebGrease" version="1.3.0" />
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="1.1.0" />
+    </dependencies>
+  </metadata>
+</package>

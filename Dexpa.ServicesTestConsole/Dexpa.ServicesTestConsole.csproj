@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F818A3AD-6760-485F-9B34-93C462CB4C4E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dexpa.ServicesTestConsole</RootNamespace>
+    <AssemblyName>Dexpa.ServicesTestConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OMSK_LOCAL_TIME</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\SlowCheetah.2.5.14\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.3.1.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YAXLib, Version=2.13.0.0, Culture=neutral, PublicKeyToken=7cc39f8266ad1835, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\YAXLib.2.13\lib\YAXLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
+    <Content Include="RegionPoints">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dexpa.Core\Dexpa.Core.csproj">
+      <Project>{127267b6-f566-4e7a-b6dc-b64f3f3ee353}</Project>
+      <Name>Dexpa.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.Infrastructure\Dexpa.Infrastructure.csproj">
+      <Project>{be10173f-ad2d-4bd5-9bf8-f436e71380f2}</Project>
+      <Name>Dexpa.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.Ioc\Dexpa.Ioc.csproj">
+      <Project>{428ecad3-7f68-4a59-998a-93e971297a72}</Project>
+      <Name>Dexpa.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.ServiceCore\Dexpa.ServiceCore.csproj">
+      <Project>{552a4715-5f83-41cd-bdd9-57bf92fd7a0f}</Project>
+      <Name>Dexpa.ServiceCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.SmsGateway\Dexpa.SmsGateway.csproj">
+      <Project>{365d1112-507a-477e-aca1-c755d1d15a30}</Project>
+      <Name>Dexpa.SmsGateway</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.SmsNotificationsServices\Dexpa.SmsNotificationsServices.csproj">
+      <Project>{8d9a3d48-6418-470f-8f96-a8a77c357606}</Project>
+      <Name>Dexpa.SmsNotificationsServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.Yandex.Taxi.Gateway\Source\Yandex.Taxi.Gateway.Contracts\Yandex.Taxi.Gateway.Contracts.csproj">
+      <Project>{284e995d-3c94-4db4-b6e0-403912ac4326}</Project>
+      <Name>Yandex.Taxi.Gateway.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.Yandex.Taxi.Gateway\Yandex.Taxi.Gateway.Core\Yandex.Taxi.Gateway.Core.csproj">
+      <Project>{1d8521d7-c339-4b26-8fc7-1a818f297044}</Project>
+      <Name>Yandex.Taxi.Gateway.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.Yandex.Taxi\Yandex.Taxi.csproj">
+      <Project>{e1b98e7d-69f8-4b6f-b874-f013faa566cb}</Project>
+      <Name>Yandex.Taxi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dexpa.YandexTaxiService\Dexpa.YandexTaxiService.csproj">
+      <Project>{63df01ee-28ee-4310-a06d-c8d0d7eec815}</Project>
+      <Name>Dexpa.YandexTaxiService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

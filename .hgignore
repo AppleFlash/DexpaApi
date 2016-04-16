@@ -1,0 +1,12 @@
+syntax: glob
+*/obj/*
+*/bin/*
+packages/*
+*.suo
+TestResults/*
+Dexpa.WebApi/App_Data/*
+Dexpa.WebApi/Deploy/*
+*.user
+Dexpa.WebApi/logs/*
+Dexpa.Yandex.Synchronizer/logs/*
+Dexpa.Yandex.Synchronizer/Deploy/*

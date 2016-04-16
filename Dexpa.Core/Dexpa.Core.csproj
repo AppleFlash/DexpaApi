@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{127267B6-F566-4E7A-B6DC-B64F3F3EE353}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dexpa.Core</RootNamespace>
+    <AssemblyName>Dexpa.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleasePreview|AnyCPU'">
+    <OutputPath>bin\ReleasePreview\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseProd|AnyCPU'">
+    <OutputPath>bin\ReleaseProd\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseTest|AnyCPU'">
+    <OutputPath>bin\ReleaseTest\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.1.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreException.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="Factories\CustomerFactory.cs" />
+    <Compile Include="Factories\DriverFactory.cs" />
+    <Compile Include="Factories\OrderFactory.cs" />
+    <Compile Include="Model\Additional\OrderPathSegment.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Car.cs" />
+    <Compile Include="Model\CarEventReport.cs" />
+    <Compile Include="Model\NewsMessage.cs" />
+    <Compile Include="Model\CustomerFeedback.cs" />
+    <Compile Include="Model\CustomerOrdersCount.cs" />
+    <Compile Include="Model\DriverScores.cs" />
+    <Compile Include="Model\Light\DriverCarRobot.cs" />
+    <Compile Include="Model\Repairs.cs" />
+    <Compile Include="Model\CarEvent.cs" />
+    <Compile Include="Model\IpPhoneUser.cs" />
+    <Compile Include="Model\Light\LightCustomer.cs" />
+    <Compile Include="Model\Light\LightOrganization.cs" />
+    <Compile Include="Model\Light\LightTariff.cs" />
+    <Compile Include="Model\Light\SimpleDriverReport.cs" />
+    <Compile Include="Model\Light\DriverCarReport.cs" />
+    <Compile Include="Model\Light\LightDriverReport.cs" />
+    <Compile Include="Model\Light\LightDriver.cs" />
+    <Compile Include="Model\Light\LightOrder.cs" />
+    <Compile Include="Model\Light\LightOrderWithPriority.cs" />
+    <Compile Include="Model\OrderDrivers.cs" />
+    <Compile Include="Model\OrderPriority.cs" />
+    <Compile Include="Model\CarClass.cs" />
+    <Compile Include="Model\CarFeatures.cs" />
+    <Compile Include="Model\CarPermission.cs" />
+    <Compile Include="Model\CarStatus.cs" />
+    <Compile Include="Model\ChildrenSeat.cs" />
+    <Compile Include="Model\CustomerReportItem.cs" />
+    <Compile Include="Model\Content.cs" />
+    <Compile Include="Model\CustomerAddresses.cs" />
+    <Compile Include="Model\DriverLicense.cs" />
+    <Compile Include="Model\DriverOrderRequest.cs" />
+    <Compile Include="Model\GlobalSettings.cs" />
+    <Compile Include="Model\OrderChangedProperties.cs" />
+    <Compile Include="Model\DriverState.cs" />
+    <Compile Include="Model\Events\EventOrderStateChanged.cs" />
+    <Compile Include="Model\Events\SystemEvent.cs" />
+    <Compile Include="Model\Events\EventType.cs" />
+    <Compile Include="Model\Location.cs" />
+    <Compile Include="Model\OrderHistory.cs" />
+    <Compile Include="Model\OrderOptions.cs" />
+    <Compile Include="Model\OrderRequest.cs" />
+    <Compile Include="Model\OrderRequestState.cs" />
+    <Compile Include="Model\OrderSource.cs" />
+    <Compile Include="Model\OrderState.cs" />
+    <Compile Include="Model\OrderType.cs" />
+    <Compile Include="Model\OrderFee.cs" />
+    <Compile Include="Model\OrderWithPriority.cs" />
+    <Compile Include="Model\Organization.cs" />
+    <Compile Include="Model\Phone.cs" />
+    <Compile Include="Model\Reports\DriverTimeReport.cs" />
+    <Compile Include="Model\Reports\OrganizationOrdersReport.cs" />
+    <Compile Include="Model\PaymentMethod.cs" />
+    <Compile Include="Model\Region.cs" />
+    <Compile Include="Model\Reports\RatingReport.cs" />
+    <Compile Include="Model\Reports\YandexOrdersReport.cs" />
+    <Compile Include="Model\RobotLog.cs" />
+    <Compile Include="Model\RobotVerdict.cs" />
+    <Compile Include="Model\RobotSettings.cs" />
+    <Compile Include="Model\Roles.cs" />
+    <Compile Include="Model\Reports\DispatcherReport.cs" />
+    <Compile Include="Model\Reports\DriversReport.cs" />
+    <Compile Include="Model\Reports\OrdersReport.cs" />
+    <Compile Include="Model\RegionPoint.cs" />
+    <Compile Include="Model\SearchResult.cs" />
+    <Compile Include="Model\SortOrder.cs" />
+    <Compile Include="Model\Tariff.cs" />
+    <Compile Include="Model\DaysEnum.cs" />
+    <Compile Include="Model\TariffOptions.cs" />
+    <Compile Include="Model\TariffRegionCost.cs" />
+    <Compile Include="Model\TariffZone.cs" />
+    <Compile Include="Model\TariffZoneType.cs" />
+    <Compile Include="Model\TrackPoint.cs" />
+    <Compile Include="Model\Tracks\DriverTrackPoint.cs" />
+    <Compile Include="Model\Tracks\TrackData.cs" />
+    <Compile Include="Model\Tracks\WaitingClientPoint.cs" />
+    <Compile Include="Model\Tracks\OnOrderPoint.cs" />
+    <Compile Include="Model\Tracks\OrderPoint.cs" />
+    <Compile Include="Model\Tracks\TrackPointType.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\TransactionGroup.cs" />
+    <Compile Include="Model\DexpaContentType.cs" />
+    <Compile Include="Model\TransactionType.cs" />
+    <Compile Include="Model\DriverWorkConditions.cs" />
+    <Compile Include="Model\OrderFeeType.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserPermission.cs" />
+    <Compile Include="Model\HistoryMessageType.cs" />
+    <Compile Include="Model\UserRole.cs" />
+    <Compile Include="Model\WayBills.cs" />
+    <Compile Include="ObjectMapper.cs" />
+    <Compile Include="Repositories\Base\ICRepository.cs" />
+    <Compile Include="Repositories\Base\ICRURepository.cs" />
+    <Compile Include="Repositories\Base\ICRUDRepository.cs" />
+    <Compile Include="Repositories\ICarEventRepository.cs" />
+    <Compile Include="Repositories\INewsMessagesRepository.cs" />
+    <Compile Include="Repositories\ICustomerFeedbackRepository.cs" />
+    <Compile Include="Repositories\IDriverScoresRepository.cs" />
+    <Compile Include="Repositories\IRepairRepository.cs" />
+    <Compile Include="Repositories\ICustomerAddressesRepository.cs" />
+    <Compile Include="Repositories\IDriverOrderRequestRepository.cs" />
+    <Compile Include="Repositories\IGlobalSettingsRepository.cs" />
+    <Compile Include="Repositories\IIpPhoneUserRepository.cs" />
+    <Compile Include="Repositories\IOrderRequestRepository.cs" />
+    <Compile Include="Repositories\IOrganizationRepository.cs" />
+    <Compile Include="Repositories\IRegionRepository.cs" />
+    <Compile Include="Repositories\ICarRepository.cs" />
+    <Compile Include="Repositories\ICustomerRepository.cs" />
+    <Compile Include="Repositories\IDriverRepository.cs" />
+    <Compile Include="Repositories\IDriverWorkConditionsRepository.cs" />
+    <Compile Include="Repositories\IEventRepository.cs" />
+    <Compile Include="Repositories\IOrderHistoryRepository.cs" />
+    <Compile Include="Repositories\IOrderRepository.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Driver.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="OrderStateType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Base\IRepository.cs" />
+    <Compile Include="Repositories\IRobotLogRepository.cs" />
+    <Compile Include="Repositories\ITariffRepository.cs" />
+    <Compile Include="Repositories\ITrackPointRepository.cs" />
+    <Compile Include="Repositories\ITransactionRepository.cs" />
+    <Compile Include="Repositories\IWayBillsRepository.cs" />
+    <Compile Include="Services\AdvancedSearchService.cs" />
+    <Compile Include="Services\AggregatedPointService.cs" />
+    <Compile Include="Services\CarEventReportService.cs" />
+    <Compile Include="Services\CarEventService.cs" />
+    <Compile Include="Services\NewsMessagesService.cs" />
+    <Compile Include="Services\ICarEventService.cs" />
+    <Compile Include="Services\ICarEventReportService.cs" />
+    <Compile Include="Services\INewsMessagesService.cs" />
+    <Compile Include="Services\RepairService.cs" />
+    <Compile Include="Services\CustomerAddressesService.cs" />
+    <Compile Include="Services\AccountService.cs" />
+    <Compile Include="Services\DriverOrderRequestService.cs" />
+    <Compile Include="Model\GeoPoint.cs" />
+    <Compile Include="Services\GlobalSettingsService.cs" />
+    <Compile Include="Services\IRepairService.cs" />
+    <Compile Include="Services\ICustomerAddressesService.cs" />
+    <Compile Include="Services\IAccountService.cs" />
+    <Compile Include="Services\IDriverOrderRequestService.cs" />
+    <Compile Include="Services\IGlobalSettingsService.cs" />
+    <Compile Include="Services\IIpPhoneUserService.cs" />
+    <Compile Include="Services\IOrderRequestService.cs" />
+    <Compile Include="Services\IOrderHistoryService.cs" />
+    <Compile Include="Services\IOrganizationService.cs" />
+    <Compile Include="Services\IpPhoneUserService.cs" />
+    <Compile Include="Services\IRobotLogService.cs" />
+    <Compile Include="Services\ITrackPointService.cs" />
+    <Compile Include="Services\IWayBillsService.cs" />
+    <Compile Include="Model\OrderConsistencyException.cs" />
+    <Compile Include="Services\OrderRequestService.cs" />
+    <Compile Include="Services\OrderHistoryService.cs" />
+    <Compile Include="Services\OrganizationService.cs" />
+    <Compile Include="Services\RegionService.cs" />
+    <Compile Include="Services\CarService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\DriverService.cs" />
+    <Compile Include="Services\DriverWorkConditionsService.cs" />
+    <Compile Include="Services\EventService.cs" />
+    <Compile Include="Services\GeocoderService.cs" />
+    <Compile Include="Services\IAdvancedSearchService.cs" />
+    <Compile Include="Services\IRegionService.cs" />
+    <Compile Include="Services\ICustomerService.cs" />
+    <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Services\ICarService.cs" />
+    <Compile Include="Services\IDriverService.cs" />
+    <Compile Include="Services\IDriverWorkConditionsService.cs" />
+    <Compile Include="Services\IEventService.cs" />
+    <Compile Include="Services\IGeocoderService.cs" />
+    <Compile Include="Services\IOrderService.cs" />
+    <Compile Include="Services\IReportService.cs" />
+    <Compile Include="Services\ITariffsService.cs" />
+    <Compile Include="Services\ITransactionService.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Services\RobotLogService.cs" />
+    <Compile Include="Services\TariffsService.cs" />
+    <Compile Include="Services\TrackPointService.cs" />
+    <Compile Include="Services\TransactionService.cs" />
+    <Compile Include="Services\WayBillsService.cs" />
+    <Compile Include="UploadFileInfo.cs" />
+    <Compile Include="Utils\OrderHistoryHelper.cs" />
+    <Compile Include="Utils\RegionBinaryStorage.cs" />
+    <Compile Include="Utils\OrderCostCalculator.cs" />
+    <Compile Include="Utils\TaximeterHelper.cs" />
+    <Compile Include="Utils\TimeConverter.cs" />
+    <Compile Include="Utils\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

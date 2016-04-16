@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECCDE7D6-2F33-45DF-A0AB-F322CB1C0889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dexpa.DTO</RootNamespace>
+    <AssemblyName>Dexpa.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountBindingModels.cs" />
+    <Compile Include="AccountViewModels.cs" />
+    <Compile Include="BalanceDTO.cs" />
+    <Compile Include="CarDTO.cs" />
+    <Compile Include="AddressDTO.cs" />
+    <Compile Include="CarEventReportDTO.cs" />
+    <Compile Include="CarEventDTO.cs" />
+    <Compile Include="CarPermissionDTO.cs" />
+    <Compile Include="CreateOrderDTO.cs" />
+    <Compile Include="DriverBlockEventDTO.cs" />
+    <Compile Include="GlobalSettingsDTO.cs" />
+    <Compile Include="IpPhoneUserDTO.cs" />
+    <Compile Include="Light\LightTariffDTO.cs" />
+    <Compile Include="Light\WorkConditionLightDTO.cs" />
+    <Compile Include="NewsMessageDTO.cs" />
+    <Compile Include="OrderHistoryDTO.cs" />
+    <Compile Include="CustomerReportItemDTO.cs" />
+    <Compile Include="ContentDTO.cs" />
+    <Compile Include="ContentsObjDTO.cs" />
+    <Compile Include="CustomerAddressesDTO.cs" />
+    <Compile Include="CustomerDTO.cs" />
+    <Compile Include="DispatcherReportDTO.cs" />
+    <Compile Include="DriverDTO.cs" />
+    <Compile Include="DriverLicenseDTO.cs" />
+    <Compile Include="DriversReportDTO.cs" />
+    <Compile Include="DriverWorkConditionsDTO.cs" />
+    <Compile Include="Events\EventOrderStateChangedDTO.cs" />
+    <Compile Include="HelpDictionaries\CarFeaturesDTO.cs" />
+    <Compile Include="HelpDictionaries\CarStatusDTO.cs" />
+    <Compile Include="HelpDictionaries\ChildrenSeatDTO.cs" />
+    <Compile Include="HelpDictionaries\DexpaContentTypeDTO.cs" />
+    <Compile Include="HelpDictionaries\DriverStateDTO.cs" />
+    <Compile Include="HelpDictionaries\OrderStateDTO.cs" />
+    <Compile Include="HelpDictionaries\OrderSourceDTO.cs" />
+    <Compile Include="HelpDictionaries\OrderTypeDTO.cs" />
+    <Compile Include="HelpDictionaries\PaymentMethodDTO.cs" />
+    <Compile Include="HelpDictionaries\DaysDTO.cs" />
+    <Compile Include="HelpDictionaries\TariffZonesDTO.cs" />
+    <Compile Include="HelpDictionaries\TariffZonesTypeDTO.cs" />
+    <Compile Include="HelpDictionaries\TransactionGroupDTO.cs" />
+    <Compile Include="HelpDictionaries\TransactionTypeDTO.cs" />
+    <Compile Include="LocationDTO.cs" />
+    <Compile Include="OrderWithPriorityDTO.cs" />
+    <Compile Include="RepairsDTO.cs" />
+    <Compile Include="RobotLogDTO.cs" />
+    <Compile Include="RobotSettingsDTO.cs" />
+    <Compile Include="OrganizationDTO.cs" />
+    <Compile Include="OrganizationOrdersReportDTO.cs" />
+    <Compile Include="OrderSearchDTO.cs" />
+    <Compile Include="UpdateLightOrderDTO.cs" />
+    <Compile Include="UpdateOrderDTO.cs" />
+    <Compile Include="OrderDTO.cs" />
+    <Compile Include="OrderFeeDTO.cs" />
+    <Compile Include="OrderOptionsDTO.cs" />
+    <Compile Include="OrdersReportDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionDTO.cs" />
+    <Compile Include="RegionPointDTO.cs" />
+    <Compile Include="SearchResultDTO.cs" />
+    <Compile Include="TariffDTO.cs" />
+    <Compile Include="TariffOptionsDTO.cs" />
+    <Compile Include="TariffRegionCostDTO.cs" />
+    <Compile Include="TrackPointDTO.cs" />
+    <Compile Include="TransactionDTO.cs" />
+    <Compile Include="WayBillsDTO.cs" />
+    <Compile Include="YandexOrdersReportDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dexpa.Core\Dexpa.Core.csproj">
+      <Project>{127267b6-f566-4e7a-b6dc-b64f3f3ee353}</Project>
+      <Name>Dexpa.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

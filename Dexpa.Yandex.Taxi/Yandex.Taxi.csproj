@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1B98E7D-69F8-4B6F-B874-F013FAA566CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yandex.Taxi</RootNamespace>
+    <AssemblyName>Yandex.Taxi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YAXLib, Version=2.12.0.0, Culture=neutral, PublicKeyToken=7cc39f8266ad1835, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\YAXLib.2.12\lib\YAXLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Blacklist\Blacklist.cs" />
+    <Compile Include="Model\Blacklist\Entry.cs" />
+    <Compile Include="Model\Drivers\Car.cs" />
+    <Compile Include="Model\Drivers\CarDetails.cs" />
+    <Compile Include="Model\Drivers\Cars.cs" />
+    <Compile Include="Model\Drivers\DriverDetails.cs" />
+    <Compile Include="Model\Drivers\Requirement.cs" />
+    <Compile Include="Model\Drivers\RequirementType.cs" />
+    <Compile Include="Model\Orders\Airport.cs" />
+    <Compile Include="Model\Orders\BookingTime.cs" />
+    <Compile Include="Model\Orders\BookingTimeType.cs" />
+    <Compile Include="Model\Orders\CancelReason.cs" />
+    <Compile Include="Model\Orders\Car.cs" />
+    <Compile Include="Model\Orders\ContactInfo.cs" />
+    <Compile Include="Model\Orders\OrderConfirmation.cs" />
+    <Compile Include="Model\Orders\Route.cs" />
+    <Compile Include="Model\Orders\Country.cs" />
+    <Compile Include="Model\Orders\Destination.cs" />
+    <Compile Include="Model\Orders\Locality.cs" />
+    <Compile Include="Model\Orders\Order.cs" />
+    <Compile Include="Model\Orders\Point.cs" />
+    <Compile Include="Model\Orders\Premise.cs" />
+    <Compile Include="Model\Orders\Recipient.cs" />
+    <Compile Include="Model\Orders\Requirement.cs" />
+    <Compile Include="Model\Orders\RequirementType.cs" />
+    <Compile Include="Model\Orders\Source.cs" />
+    <Compile Include="Model\Orders\Thoroughfare.cs" />
+    <Compile Include="Model\Orders\Unit.cs" />
+    <Compile Include="Model\Orders\UnitValue.cs" />
+    <Compile Include="Model\Statuses\Car.cs" />
+    <Compile Include="Model\Statuses\CarsStatus.cs" />
+    <Compile Include="Model\Statuses\Status.cs" />
+    <Compile Include="Model\Rates\Area.cs" />
+    <Compile Include="Model\Rates\Day.cs" />
+    <Compile Include="Model\Rates\Payment.cs" />
+    <Compile Include="Model\Rates\PaymentType.cs" />
+    <Compile Include="Model\Rates\Routes\BaseRoute.cs" />
+    <Compile Include="Model\Rates\Interval.cs" />
+    <Compile Include="Model\Rates\Intervals.cs" />
+    <Compile Include="Model\Rates\LocalizedString.cs" />
+    <Compile Include="Model\Rates\Rate.cs" />
+    <Compile Include="Model\Rates\RateChoice.cs" />
+    <Compile Include="Model\Rates\Routes\FixedRoute.cs" />
+    <Compile Include="Model\Rates\Routes\FreeRoute.cs" />
+    <Compile Include="Model\Rates\Routes\Route.cs" />
+    <Compile Include="Model\Rates\Schedule.cs" />
+    <Compile Include="Model\Rates\Services\AnimalTransportService.cs" />
+    <Compile Include="Model\Rates\Services\BaseService.cs" />
+    <Compile Include="Model\Rates\Services\ChildChairService.cs" />
+    <Compile Include="Model\Rates\Services\ConditionerService.cs" />
+    <Compile Include="Model\Rates\Services\ContinueTransferService.cs" />
+    <Compile Include="Model\Rates\Services\NoSmokingService.cs" />
+    <Compile Include="Model\Rates\Services\OtherService.cs" />
+    <Compile Include="Model\Rates\Services\PadiDispatchService.cs" />
+    <Compile Include="Model\Rates\Services\ServiceType.cs" />
+    <Compile Include="Model\Rates\Services\StandardServices.cs" />
+    <Compile Include="Model\Rates\Services\TaximeterService.cs" />
+    <Compile Include="Model\Rates\Services\UniversalService.cs" />
+    <Compile Include="Model\Rates\Services\WaitingService.cs" />
+    <Compile Include="Model\Rates\Span.cs" />
+    <Compile Include="Model\Rates\Taximeter\MeterRule.cs" />
+    <Compile Include="Model\Rates\Taximeter\MeterType.cs" />
+    <Compile Include="Model\Rates\Taximeter\TaximeterCalc.cs" />
+    <Compile Include="Model\Rates\Values\DistanceOrTimeValue.cs" />
+    <Compile Include="Model\Rates\Values\SpeedValue.cs" />
+    <Compile Include="Model\Rates\Taximeter\TaximeterCalcRule.cs" />
+    <Compile Include="Model\Rates\Values\TimeValue.cs" />
+    <Compile Include="Model\Rates\Units\DistanceOrTimeUnit.cs" />
+    <Compile Include="Model\Rates\Units\SpeedUnit.cs" />
+    <Compile Include="Model\Rates\TimeInterval.cs" />
+    <Compile Include="Model\Rates\Units\TimeUnit.cs" />
+    <Compile Include="Model\Tracks\Point.cs" />
+    <Compile Include="Model\Tracks\Track.cs" />
+    <Compile Include="Model\Tracks\Tracks.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YesNoSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

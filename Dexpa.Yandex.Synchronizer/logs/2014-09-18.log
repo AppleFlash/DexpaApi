@@ -1,0 +1,39 @@
+2014-09-18 21:23:08.3162 DEBUG Get Drivers
+
+
+2014-09-18 21:23:11.5863 ERROR GetDrivers
+System.InvalidOperationException: The model backing the 'ModelContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   в System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   в System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   в System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   в System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   в System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   в System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   в System.Data.Entity.Internal.InternalContext.Initialize()
+   в System.Data.Entity.Internal.LazyInternalContext.get_ObjectContext()
+   в System.Data.Entity.Database.BeginTransaction(IsolationLevel isolationLevel)
+   в Dexpa.Infrastructure.Repositories.ARepository`1.List(Expression`1 expression)
+   в Dexpa.Core.Services.DriverService.GetDrivers(Boolean includeFiredDrivers)
+   в Yandex.Synchronizer.Controllers.YandexController.GetDrivers() в c:\Repos\Depxa\yandex.synchronizer\Yandex.Synchronizer\Controllers\YandexController.cs:строка 43    в System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   в System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   в System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   в System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   в System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   в System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   в System.Data.Entity.Internal.InternalContext.Initialize()
+   в System.Data.Entity.Internal.LazyInternalContext.get_ObjectContext()
+   в System.Data.Entity.Database.BeginTransaction(IsolationLevel isolationLevel)
+   в Dexpa.Infrastructure.Repositories.ARepository`1.List(Expression`1 expression)
+   в Dexpa.Core.Services.DriverService.GetDrivers(Boolean includeFiredDrivers)
+   в Yandex.Synchronizer.Controllers.YandexController.GetDrivers() в c:\Repos\Depxa\yandex.synchronizer\Yandex.Synchronizer\Controllers\YandexController.cs:строка 43
+
+2014-09-18 21:23:38.5620 DEBUG Get Drivers
+
+
+2014-09-18 21:26:57.1607 DEBUG Get Drivers
+
+

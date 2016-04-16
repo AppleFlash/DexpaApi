@@ -1,0 +1,5 @@
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi.Gateway\Source\Yandex.Taxi.Gateway.Contracts\bin\Debug\Yandex.Taxi.Gateway.Contracts.dll
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi.Gateway\Source\Yandex.Taxi.Gateway.Contracts\bin\Debug\Yandex.Taxi.Gateway.Contracts.pdb
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi.Gateway\Source\Yandex.Taxi.Gateway.Contracts\obj\Debug\Yandex.Taxi.Gateway.Contracts.dll
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi.Gateway\Source\Yandex.Taxi.Gateway.Contracts\obj\Debug\Yandex.Taxi.Gateway.Contracts.pdb
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi.Gateway\Source\Yandex.Taxi.Gateway.Contracts\obj\Debug\Yandex.Taxi.Gateway.Contracts.csprojResolveAssemblyReference.cache

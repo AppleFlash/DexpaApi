@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\bin\Debug\Dexpa.YandexCabinet.Parser.dll
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\bin\Debug\Dexpa.YandexCabinet.Parser.pdb
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\bin\Debug\HtmlAgilityPack.dll
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\bin\Debug\HtmlAgilityPack.xml
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\obj\Debug\Dexpa.YandexCabinet.Parser.dll
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\obj\Debug\Dexpa.YandexCabinet.Parser.pdb
+C:\Users\User\Desktop\API\Dexpa.YandexCabinet.Parser\obj\Debug\Dexpa.YandexCabinet.Parser.csprojResolveAssemblyReference.cache

@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Authorization sample</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <form id="userData">
+        <input type="text" name="UserName" placeholder="Name" />
+        <input type="password" name="Password" placeholder="Password" />
+        <input type="password" name="ConfirmPassword" placeholder="Password" />
+        <input type="text" name="driverId" placeholder="Driver ID" />
+        <input type="text" name="Name" value="Name" />
+        <input type="text" name="LastName" value="Name" />
+        <input type="text" name="MiddleName" value="Name" />
+        <input type="submit" id="register" value="Register" />
+    </form>
+
+    <h2>Login</h2>
+    <form id="loginData">
+        <input type="text" name="UserName" placeholder="Name" />
+        <input type="password" name="Password" placeholder="Password" />
+        <input type="submit" id="login" value="Login" />
+    </form>
+
+    <h2>Orders</h2>
+    <form id="getOrdersForm">
+        <input type="submit" name="GetOrders" value="Get orders" id="getOrders" />
+    </form>
+
+    <h2>Profile</h2>
+    <form id="getDriverForm">
+        <input type="submit" name="GetProfile" value="Show Profile" id="getProfile" />
+    </form>
+
+    <h2>Events</h2>
+    <form id="getEventsForm">
+        <input type="submit" name="GetEvents" value="Show Events" id="getEvents" />
+    </form>
+
+    <h2>Tariffs</h2>
+    <form id="getTariffsForm">
+        <input type="submit" name="GetTariffs" value="Show Tariffs" id="getTariffs" />
+    </form>
+
+    <h2>Transactions</h2>
+    <form id="getTransactionsFrom">
+        <input type="submit" name="GetTransactions" value="Show Transactions" id="GetTransactions" />
+    </form>
+
+    <h2>My orders</h2>
+    <form id="getRatingForm">
+        <input type="submit" name="GetRating" value="Show orders" id="getMyOrders" />
+    </form>
+
+    <h2>Free orders</h2>
+    <form id="getFreeOrders">
+        <input type="submit" name="GetRating" value="Show orders" id="getFreeORders" />
+    </form>
+
+    <h2>Actual order</h2>
+    <form id="getActualOrderForm">
+        <input type="submit" name="GetRating" value="Get" id="getActualOrder" />
+    </form>
+
+    <h2>Urgent orders</h2>
+    <form id="getUrgentOrdersForm">
+        <input type="submit" name="GetRating" value="Get" id="getUrgentORders" />
+    </form>
+
+    <pre id="output"></pre>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script>
+        var apiUrl = "http://localhost:41898//api/";
+        var accessToken = "";
+
+        var showResponse = function (data) {
+            $("#output").text(JSON.stringify(data, null, 4));
+        }
+
+        var register = function () {
+            var url = apiUrl + "account/register";
+            var data = $("#userData").serialize();
+            $.post(url, data).always(showResponse);
+            return false;
+        };
+
+        var saveAccessToken = function (data) {
+            accessToken = data.access_token;
+        }
+
+        var login = function () {
+            var url = apiUrl + "identity";
+            var data = $("#loginData").serialize();
+            data += "&grant_type=password";
+            $.post(url, data)
+                .success(saveAccessToken)
+                .always(showResponse);
+            return false;
+        }
+
+        var getHeaders = function () {
+            if (accessToken) {
+                return { "Authorization": "Bearer " + accessToken };
+            }
+        }
+
+        var getDrivers = function () {
+            var url = apiUrl + "driver/orders/?orderState=assigned";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders()
+            }).always(showResponse);
+            return false;
+        }
+
+        var getProfile = function () {
+            var url = apiUrl + "driver/profile";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders()
+            }).always(showResponse);
+            return false;
+        }
+
+        var getEvents = function () {
+            var url = apiUrl + "driver/events?timestamp=2014-06-01";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders()
+            }).always(showResponse);
+            return false;
+        }
+
+        var getTariffs = function () {
+            var url = apiUrl + "driver/tariffs";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders()
+            }).always(showResponse);
+            return false;
+        };
+
+        var getTransactions = function () {
+            var url = apiUrl + "driver/transactions?fromDate=2014-01-01&toDate=2015-01-01";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders()
+            }).always(showResponse);
+            return false;
+        };
+
+
+        var data = {
+            state:
+            {
+                type: 2
+            },
+            id: 9301
+        };
+
+        var getMyOrders = function () {
+            var url = apiUrl + "driver/orders?orderState=assigned";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders(),
+                data: data
+            }).always(showResponse);
+            return false;
+        };
+
+        var getFreeOrders = function () {
+            var url = apiUrl + "driver/orders?orderState=created";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders(),
+                data: data
+            }).always(showResponse);
+            return false;
+        };
+
+        var getActualOrder = function () {
+            var url = apiUrl + "driver/orders/actual";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders(),
+                data: data
+            }).always(showResponse);
+            return false;
+        };
+
+        var getUrgentOrders = function () {
+            var url = apiUrl + "driver/orders/urgent";
+            $.ajax(url, {
+                type: "GET",
+                headers: getHeaders(),
+                data: data
+            }).always(showResponse);
+            return false;
+        };
+
+        $("#register").click(register);
+        $("#login").click(login);
+        $("#getOrders").click(getDrivers);
+        $("#getProfile").click(getProfile);
+        $("#getEvents").click(getEvents);
+        $("#getTariffs").click(getTariffs);
+        $("#GetTransactions").click(getTransactions);
+        $("#getMyOrders").click(getMyOrders);
+        $("#getFreeOrders").click(getFreeOrders);
+        $("#getActualOrder").click(getActualOrder);
+        $("#getUrgentORders").click(getUrgentOrders);
+    </script>
+</body>
+</html>

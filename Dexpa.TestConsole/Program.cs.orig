@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Schema;
+using Dexpa.Core.Factories;
+using Dexpa.Core.Model;
+using Dexpa.Core.Repositories;
+using Dexpa.Core.Services;
+using Dexpa.Core.Utils;
+using Dexpa.Infrastructure;
+using Dexpa.Infrastructure.Repositories;
+using Dexpa.Ioc;
+using Dexpa.YandexCabinet.Parser;
+
+namespace Dexpa.TestConsole
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             /*var scope = new object();
+            var orderService = Ioc.IocFactory.Instance.Create<IOrderService>(scope);
+            var order = orderService.GetOrder(10199);
+            var driverService = IocFactory.Instance.Create<IDriverService>(scope);
+            var driver = driverService.GetDriver(302);
+            var requestService = IocFactory.Instance.Create<IDriverOrderRequestService>(scope);
+<<<<<<< local
+            requestService.AddRequest(order, driver, OrderRequestState.Rejected);
+            var scope = new object();
+            var scope = new object();
+=======
+            requestService.AddRequest(order, driver, OrderRequestState.Rejected);*/
+
+            
+            /*var scope = new object();
+>>>>>>> other
+            var settingsService = Ioc.IocFactory.Instance.Create<IGlobalSettingsService>(scope);
+            var settings = settingsService.GetSettings();
+<<<<<<< local
+=======
+
+            var url = ConfigurationManager.AppSettings["YandexCabinet"];
+
+>>>>>>> other
+            var id = settings.YandexCabId;
+            if (settings.YandexCabLogin != null && settings.YandexCabPassword != null)
+            {
+                var parser = new YandexCabinetParser(settings.YandexCabLogin, settings.YandexCabPassword,
+<<<<<<< local
+                settings.YandexCabId);
+            }
+            string fileName = "RegionPoints";
+=======
+                settings.YandexCabId, url);
+                var feedbacks = parser.GetFeedback();
+            }*/
+
+            /*string fileName = "RegionPoints";
+>>>>>>> other
+            var storage = new RegionBinaryStorage(fileName);
+            storage.GetAllPoints();*/
+
+            var scope = new object();
+            var trackService = Ioc.IocFactory.Instance.Create<ITrackPointService>(scope);
+            DateTime s1 = Convert.ToDateTime("30.10.2014 22:19");
+            DateTime s2 = Convert.ToDateTime("04.02.2015 22:16:09");
+           // trackService.GetDriverTrackPoints(333, s1, s2);
+        }
+    }
+}

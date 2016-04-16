@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\bin\Debug\Yandex.Taxi.dll
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\bin\Debug\Yandex.Taxi.pdb
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\bin\Debug\YAXLib.dll
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\bin\Debug\YAXLib.pdb
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\bin\Debug\YAXLib.xml
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\obj\Debug\Yandex.Taxi.dll
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\obj\Debug\Yandex.Taxi.pdb
+C:\Users\User\Desktop\API\Dexpa.Yandex.Taxi\obj\Debug\Yandex.Taxi.csprojResolveAssemblyReference.cache

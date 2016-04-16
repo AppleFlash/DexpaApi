@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="GetFreeOrders" Id="53828e67-c02e-4293-9f1c-11d5167a06c2" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="826acdbf-cb3e-4ac3-98db-cd7f98e17bba" Version="1.1" Url="{{ApiServer}}driver/orders/?state=created" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Authorization" Value="Bearer {{Token}}" />
+      </Headers>
+    </Request>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="ApiServer" Value="http://testapi.dexpa.ru/api/" />
+    <ContextParameter Name="Token" Value="CKDwtip5P_bf2Rn03m-JoloXJjTZAfZORjvUUqnkirYLDj97LifLdb_CCOHDTFw5mTU56ZlY0xg5VZZeCjHDsBSXnsaL6uR51sSGw-NQS0sMdzfz9gGPUpH0oIAR6YWgFmwd15AlIAvk-GlbPZCeYQW33VN2toBAmzg1u4vGhvFm4p4y9COIBwXYccDLQBIPcHnCcKRQAqdHv3Gliq4XgSlx7gr0Ka6iA0BlAQ8g1vywb3mLoZFul4xoh_sGds67hCecUK8sjdTVgj7zJ4vXUzuXk7g_Xy26moMdh0Ynn2EO4n196g1VJZsrwH_ql7aitbocSelv4I06ZAVeFuE0HpSrcaqSqf39RdmUOD1d1itgbGupNIvX5ESGCRV91mzSmVGkOU-SIjqJLPyiddU41Aw0AlqccZyWSzYWGNxYTgUqeUJD5vYKH_YLgpUrtb1JC_w7uRjQOLIQbfJfLWgG7H6DGpQl6OkYoMKmRrz0fDE" />
+  </ContextParameters>
+</WebTest>

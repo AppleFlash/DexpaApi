@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE10173F-AD2D-4BD5-9BF8-F436E71380F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dexpa.Infrastructure</RootNamespace>
+    <AssemblyName>Dexpa.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.BulkInsert">
+      <HintPath>..\packages\EntityFramework.BulkInsert-ef6.6.0.2.8\lib\Net45\EntityFramework.BulkInsert.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.MappingAPI">
+      <HintPath>..\packages\EntityFramework.MappingAPI.6.0.0.7\lib\net45\EntityFramework.MappingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.1.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.2\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\Update085.cs" />
+    <Compile Include="Migrations\Update085.Designer.cs">
+      <DependentUpon>Update085.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update084.cs" />
+    <Compile Include="Migrations\Update084.Designer.cs">
+      <DependentUpon>Update084.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update083.cs" />
+    <Compile Include="Migrations\Update083.Designer.cs">
+      <DependentUpon>Update083.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update082.cs" />
+    <Compile Include="Migrations\Update082.Designer.cs">
+      <DependentUpon>Update082.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update081.cs" />
+    <Compile Include="Migrations\Update081.Designer.cs">
+      <DependentUpon>Update081.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update080.cs" />
+    <Compile Include="Migrations\Update080.Designer.cs">
+      <DependentUpon>Update080.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update079.cs" />
+    <Compile Include="Migrations\Update079.Designer.cs">
+      <DependentUpon>Update079.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update078.cs" />
+    <Compile Include="Migrations\Update078.Designer.cs">
+      <DependentUpon>Update078.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update077.cs" />
+    <Compile Include="Migrations\Update077.Designer.cs">
+      <DependentUpon>Update077.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update076.cs" />
+    <Compile Include="Migrations\Update076.Designer.cs">
+      <DependentUpon>Update076.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update075.cs" />
+    <Compile Include="Migrations\Update075.Designer.cs">
+      <DependentUpon>Update075.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update073.cs" />
+    <Compile Include="Migrations\Update073.Designer.cs">
+      <DependentUpon>Update073.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update072.cs" />
+    <Compile Include="Migrations\Update072.Designer.cs">
+      <DependentUpon>Update072.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update071.cs" />
+    <Compile Include="Migrations\Update071.Designer.cs">
+      <DependentUpon>Update071.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update070.cs" />
+    <Compile Include="Migrations\Update070.Designer.cs">
+      <DependentUpon>Update070.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update069.cs" />
+    <Compile Include="Migrations\Update069.Designer.cs">
+      <DependentUpon>Update069.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update068.cs" />
+    <Compile Include="Migrations\Update068.Designer.cs">
+      <DependentUpon>Update068.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update067.cs" />
+    <Compile Include="Migrations\Update067.Designer.cs">
+      <DependentUpon>Update067.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update066.cs" />
+    <Compile Include="Migrations\Update066.Designer.cs">
+      <DependentUpon>Update066.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update065.cs" />
+    <Compile Include="Migrations\Update065.Designer.cs">
+      <DependentUpon>Update065.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update064.cs" />
+    <Compile Include="Migrations\Update064.Designer.cs">
+      <DependentUpon>Update064.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update063.cs" />
+    <Compile Include="Migrations\Update063.Designer.cs">
+      <DependentUpon>Update063.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update062.cs" />
+    <Compile Include="Migrations\Update062.Designer.cs">
+      <DependentUpon>Update062.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update061.cs" />
+    <Compile Include="Migrations\Update061.Designer.cs">
+      <DependentUpon>Update061.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update060.cs" />
+    <Compile Include="Migrations\Update060.Designer.cs">
+      <DependentUpon>Update060.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update059.cs" />
+    <Compile Include="Migrations\Update059.Designer.cs">
+      <DependentUpon>Update059.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update058.cs" />
+    <Compile Include="Migrations\Update058.Designer.cs">
+      <DependentUpon>Update058.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update057.cs" />
+    <Compile Include="Migrations\Update057.Designer.cs">
+      <DependentUpon>Update057.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update056.cs" />
+    <Compile Include="Migrations\Update056.Designer.cs">
+      <DependentUpon>Update056.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update055.cs" />
+    <Compile Include="Migrations\Update055.Designer.cs">
+      <DependentUpon>Update055.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update054.cs" />
+    <Compile Include="Migrations\Update054.Designer.cs">
+      <DependentUpon>Update054.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update053.cs" />
+    <Compile Include="Migrations\Update053.Designer.cs">
+      <DependentUpon>Update053.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update051.cs" />
+    <Compile Include="Migrations\Update051.Designer.cs">
+      <DependentUpon>Update051.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update052.cs" />
+    <Compile Include="Migrations\Update052.Designer.cs">
+      <DependentUpon>Update052.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update050.cs" />
+    <Compile Include="Migrations\Update050.Designer.cs">
+      <DependentUpon>Update050.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update049.cs" />
+    <Compile Include="Migrations\Update049.Designer.cs">
+      <DependentUpon>Update049.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update048.cs" />
+    <Compile Include="Migrations\Update048.Designer.cs">
+      <DependentUpon>Update048.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update047.cs" />
+    <Compile Include="Migrations\Update047.Designer.cs">
+      <DependentUpon>Update047.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update046.cs" />
+    <Compile Include="Migrations\Update046.Designer.cs">
+      <DependentUpon>Update046.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update045.cs" />
+    <Compile Include="Migrations\Update045.Designer.cs">
+      <DependentUpon>Update045.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update044.cs" />
+    <Compile Include="Migrations\Update044.Designer.cs">
+      <DependentUpon>Update044.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update043.cs" />
+    <Compile Include="Migrations\Update043.Designer.cs">
+      <DependentUpon>Update043.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update042.cs" />
+    <Compile Include="Migrations\Update042.Designer.cs">
+      <DependentUpon>Update042.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update041.cs" />
+    <Compile Include="Migrations\Update041.Designer.cs">
+      <DependentUpon>Update041.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update040.cs" />
+    <Compile Include="Migrations\Update040.Designer.cs">
+      <DependentUpon>Update040.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update039.cs" />
+    <Compile Include="Migrations\Update039.Designer.cs">
+      <DependentUpon>Update039.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update038.cs" />
+    <Compile Include="Migrations\Update038.Designer.cs">
+      <DependentUpon>Update038.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update037.cs" />
+    <Compile Include="Migrations\Update037.Designer.cs">
+      <DependentUpon>Update037.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update036.cs" />
+    <Compile Include="Migrations\Update036.Designer.cs">
+      <DependentUpon>Update036.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update035.cs" />
+    <Compile Include="Migrations\Update035.Designer.cs">
+      <DependentUpon>Update035.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update034.cs" />
+    <Compile Include="Migrations\Update034.Designer.cs">
+      <DependentUpon>Update034.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update033.cs" />
+    <Compile Include="Migrations\Update033.Designer.cs">
+      <DependentUpon>Update033.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update032.cs" />
+    <Compile Include="Migrations\Update032.Designer.cs">
+      <DependentUpon>Update032.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update031.cs" />
+    <Compile Include="Migrations\Update031.Designer.cs">
+      <DependentUpon>Update031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update030.cs" />
+    <Compile Include="Migrations\Update030.Designer.cs">
+      <DependentUpon>Update030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update029.cs" />
+    <Compile Include="Migrations\Update029.Designer.cs">
+      <DependentUpon>Update029.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update028.cs" />
+    <Compile Include="Migrations\Update028.Designer.cs">
+      <DependentUpon>Update028.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update027.cs" />
+    <Compile Include="Migrations\Update027.Designer.cs">
+      <DependentUpon>Update027.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update026.cs" />
+    <Compile Include="Migrations\Update026.Designer.cs">
+      <DependentUpon>Update026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update025.cs" />
+    <Compile Include="Migrations\Update025.Designer.cs">
+      <DependentUpon>Update025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update024.cs" />
+    <Compile Include="Migrations\Update024.Designer.cs">
+      <DependentUpon>Update024.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update023.cs" />
+    <Compile Include="Migrations\Update023.Designer.cs">
+      <DependentUpon>Update023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update022.cs" />
+    <Compile Include="Migrations\Update022.Designer.cs">
+      <DependentUpon>Update022.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update021.cs" />
+    <Compile Include="Migrations\Update021.Designer.cs">
+      <DependentUpon>Update021.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update020.cs" />
+    <Compile Include="Migrations\Update020.Designer.cs">
+      <DependentUpon>Update020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update019.cs" />
+    <Compile Include="Migrations\Update019.Designer.cs">
+      <DependentUpon>Update019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update018.cs" />
+    <Compile Include="Migrations\Update018.Designer.cs">
+      <DependentUpon>Update018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update016.cs" />
+    <Compile Include="Migrations\Update016.Designer.cs">
+      <DependentUpon>Update016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update015.cs" />
+    <Compile Include="Migrations\Update015.Designer.cs">
+      <DependentUpon>Update015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update014.cs" />
+    <Compile Include="Migrations\Update014.Designer.cs">
+      <DependentUpon>Update014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update012.cs" />
+    <Compile Include="Migrations\Update012.Designer.cs">
+      <DependentUpon>Update012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update011.cs" />
+    <Compile Include="Migrations\Update011.Designer.cs">
+      <DependentUpon>Update011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update009.cs" />
+    <Compile Include="Migrations\Update009.Designer.cs">
+      <DependentUpon>Update009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update008.cs" />
+    <Compile Include="Migrations\Update008.Designer.cs">
+      <DependentUpon>Update008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update007.cs" />
+    <Compile Include="Migrations\Update007.Designer.cs">
+      <DependentUpon>Update007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update006.cs" />
+    <Compile Include="Migrations\Update006.Designer.cs">
+      <DependentUpon>Update006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update005.cs" />
+    <Compile Include="Migrations\Update005.Designer.cs">
+      <DependentUpon>Update005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update004.cs" />
+    <Compile Include="Migrations\Update004.Designer.cs">
+      <DependentUpon>Update004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update003.cs" />
+    <Compile Include="Migrations\Update003.Designer.cs">
+      <DependentUpon>Update003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update002.cs" />
+    <Compile Include="Migrations\Update002.Designer.cs">
+      <DependentUpon>Update002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update001.cs" />
+    <Compile Include="Migrations\Update001.Designer.cs">
+      <DependentUpon>Update001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\CreateDatabase.cs" />
+    <Compile Include="Migrations\CreateDatabase.Designer.cs">
+      <DependentUpon>CreateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Update010.cs" />
+    <Compile Include="Migrations\Update010.Designer.cs">
+      <DependentUpon>Update010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update017.cs" />
+    <Compile Include="Migrations\Update017.Designer.cs">
+      <DependentUpon>Update017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Update074.cs" />
+    <Compile Include="Migrations\Update074.Designer.cs">
+      <DependentUpon>Update074.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelContext.StoredProcedures.cs" />
+    <Compile Include="ModelContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ARepository.cs" />
+    <Compile Include="Repositories\NewsMessagesRepository.cs" />
+    <Compile Include="Repositories\CustomerAddressesRepository.cs" />
+    <Compile Include="Repositories\CustomerFeedbackRepository.cs" />
+    <Compile Include="Repositories\DriverOrderRequestRepository.cs" />
+    <Compile Include="Repositories\DriverScoresRepository.cs" />
+    <Compile Include="Repositories\GlobalSettingsRepository.cs" />
+    <Compile Include="Repositories\IpPhoneRepository.cs" />
+    <Compile Include="Repositories\OrderRequestRepository.cs" />
+    <Compile Include="Repositories\OrganizationRepository.cs" />
+    <Compile Include="Repositories\RegionRepository.cs" />
+    <Compile Include="Repositories\CarRepository.cs" />
+    <Compile Include="Repositories\ContentRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\DriverRepository.cs" />
+    <Compile Include="Repositories\DriverWorkConditionsRepository.cs" />
+    <Compile Include="Repositories\EventRepository.cs" />
+    <Compile Include="Repositories\IContentRepository.cs" />
+    <Compile Include="Repositories\OrderHistoryRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\CarEventRepository.cs" />
+    <Compile Include="Repositories\RobotLogRepository.cs" />
+    <Compile Include="Repositories\TariffRepository.cs" />
+    <Compile Include="Repositories\TrackPointRepository.cs" />
+    <Compile Include="Repositories\TransactionRepository.cs" />
+    <Compile Include="Repositories\RepairRepository.cs" />
+    <Compile Include="Repositories\WayBillsrepository.cs" />
+    <Compile Include="Services\ContentService.cs" />
+    <Compile Include="Services\IContentService.cs" />
+    <Compile Include="TransactionsFactory.cs" />
+    <Compile Include="Utils\PhotoCreator.cs" />
+    <Compile Include="Utils\MapRegionsSeed.cs" />
+    <Compile Include="Utils\HexIdGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dexpa.Core\Dexpa.Core.csproj">
+      <Project>{127267b6-f566-4e7a-b6dc-b64f3f3ee353}</Project>
+      <Name>Dexpa.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\Update085.resx">
+      <DependentUpon>Update085.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update084.resx">
+      <DependentUpon>Update084.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update083.resx">
+      <DependentUpon>Update083.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update082.resx">
+      <DependentUpon>Update082.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update081.resx">
+      <DependentUpon>Update081.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update080.resx">
+      <DependentUpon>Update080.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update079.resx">
+      <DependentUpon>Update079.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update078.resx">
+      <DependentUpon>Update078.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update077.resx">
+      <DependentUpon>Update077.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update076.resx">
+      <DependentUpon>Update076.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update075.resx">
+      <DependentUpon>Update075.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update073.resx">
+      <DependentUpon>Update073.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update072.resx">
+      <DependentUpon>Update072.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update071.resx">
+      <DependentUpon>Update071.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update070.resx">
+      <DependentUpon>Update070.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update069.resx">
+      <DependentUpon>Update069.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update068.resx">
+      <DependentUpon>Update068.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update067.resx">
+      <DependentUpon>Update067.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update066.resx">
+      <DependentUpon>Update066.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update065.resx">
+      <DependentUpon>Update065.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update064.resx">
+      <DependentUpon>Update064.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update063.resx">
+      <DependentUpon>Update063.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update062.resx">
+      <DependentUpon>Update062.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update061.resx">
+      <DependentUpon>Update061.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update060.resx">
+      <DependentUpon>Update060.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update059.resx">
+      <DependentUpon>Update059.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update058.resx">
+      <DependentUpon>Update058.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update057.resx">
+      <DependentUpon>Update057.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update056.resx">
+      <DependentUpon>Update056.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update055.resx">
+      <DependentUpon>Update055.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update054.resx">
+      <DependentUpon>Update054.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update053.resx">
+      <DependentUpon>Update053.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update051.resx">
+      <DependentUpon>Update051.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update052.resx">
+      <DependentUpon>Update052.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update050.resx">
+      <DependentUpon>Update050.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update049.resx">
+      <DependentUpon>Update049.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update048.resx">
+      <DependentUpon>Update048.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update047.resx">
+      <DependentUpon>Update047.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update046.resx">
+      <DependentUpon>Update046.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update045.resx">
+      <DependentUpon>Update045.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update044.resx">
+      <DependentUpon>Update044.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update043.resx">
+      <DependentUpon>Update043.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update042.resx">
+      <DependentUpon>Update042.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update041.resx">
+      <DependentUpon>Update041.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update040.resx">
+      <DependentUpon>Update040.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update039.resx">
+      <DependentUpon>Update039.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update038.resx">
+      <DependentUpon>Update038.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update037.resx">
+      <DependentUpon>Update037.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update036.resx">
+      <DependentUpon>Update036.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update035.resx">
+      <DependentUpon>Update035.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update034.resx">
+      <DependentUpon>Update034.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update033.resx">
+      <DependentUpon>Update033.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update032.resx">
+      <DependentUpon>Update032.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update031.resx">
+      <DependentUpon>Update031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update030.resx">
+      <DependentUpon>Update030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update029.resx">
+      <DependentUpon>Update029.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update028.resx">
+      <DependentUpon>Update028.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update027.resx">
+      <DependentUpon>Update027.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update026.resx">
+      <DependentUpon>Update026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update025.resx">
+      <DependentUpon>Update025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update024.resx">
+      <DependentUpon>Update024.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update023.resx">
+      <DependentUpon>Update023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update022.resx">
+      <DependentUpon>Update022.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update021.resx">
+      <DependentUpon>Update021.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update020.resx">
+      <DependentUpon>Update020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update019.resx">
+      <DependentUpon>Update019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update018.resx">
+      <DependentUpon>Update018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update016.resx">
+      <DependentUpon>Update016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update015.resx">
+      <DependentUpon>Update015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update014.resx">
+      <DependentUpon>Update014.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update012.resx">
+      <DependentUpon>Update012.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update011.resx">
+      <DependentUpon>Update011.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update009.resx">
+      <DependentUpon>Update009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update008.resx">
+      <DependentUpon>Update008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update007.resx">
+      <DependentUpon>Update007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update006.resx">
+      <DependentUpon>Update006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update005.resx">
+      <DependentUpon>Update005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update004.resx">
+      <DependentUpon>Update004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update003.resx">
+      <DependentUpon>Update003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update002.resx">
+      <DependentUpon>Update002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update001.resx">
+      <DependentUpon>Update001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\CreateDatabase.resx">
+      <DependentUpon>CreateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update010.resx">
+      <DependentUpon>Update010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update017.resx">
+      <DependentUpon>Update017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Update074.resx">
+      <DependentUpon>Update074.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

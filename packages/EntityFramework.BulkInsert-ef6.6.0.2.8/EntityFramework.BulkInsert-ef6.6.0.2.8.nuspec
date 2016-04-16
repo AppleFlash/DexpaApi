@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>EntityFramework.BulkInsert-ef6</id>
+    <version>6.0.2.8</version>
+    <title>EntityFramework.BulkInsert-ef6</title>
+    <authors>Markko Legonkov</authors>
+    <owners>Markko Legonkov</owners>
+    <licenseUrl>https://efbulkinsert.codeplex.com/license</licenseUrl>
+    <projectUrl>https://efbulkinsert.codeplex.com/</projectUrl>
+    <iconUrl>https://download-codeplex.sec.s-msft.com/Download?ProjectName=efbulkinsert&amp;DownloadId=784192&amp;Build=20865</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Bulk insert extension for EntityFramework 6</description>
+    <summary>Bulk insert extension for EntityFramework 6</summary>
+    <releaseNotes>progress callback method
+		timeout
+		streaming (NET45)
+		DbGeography support (NET45)</releaseNotes>
+    <copyright>Copyright  2013</copyright>
+    <language>en-US</language>
+    <tags>data EntityFramework ef6 batch bulk insert</tags>
+    <dependencies>
+      <dependency id="EntityFramework" version="6.0.0" />
+      <dependency id="EntityFramework.MappingAPI" version="6.0.0.7" />
+    </dependencies>
+  </metadata>
+</package>
